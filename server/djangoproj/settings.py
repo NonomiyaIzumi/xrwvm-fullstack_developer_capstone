@@ -100,18 +100,19 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # --- Capstone microservice endpoints -------------------------------------------------
 # Locally these are set as full URLs (BACKEND_URL/SENTIMENT_ANALYZER_URL, with
-# scheme). On Render, render.yaml can only pass a bare hostname between
-# services (fromService: property: host), so BACKEND_HOST/
-# SENTIMENT_ANALYZER_HOST take priority and get "https://" prepended.
-_backend_host = os.environ.get("BACKEND_HOST")
+# scheme). On Render, services talk to each other over Render's internal
+# network using plain HTTP on a "host:port" pair (fromService: property:
+# hostport) - not HTTPS, and not the public *.onrender.com domain - so
+# BACKEND_HOSTPORT/SENTIMENT_ANALYZER_HOSTPORT take priority when set.
+_backend_hostport = os.environ.get("BACKEND_HOSTPORT")
 BACKEND_URL = (
-    f"https://{_backend_host}" if _backend_host
+    f"http://{_backend_hostport}" if _backend_hostport
     else os.environ.get("BACKEND_URL", "http://localhost:3030")
 )
 
-_sentiment_host = os.environ.get("SENTIMENT_ANALYZER_HOST")
+_sentiment_hostport = os.environ.get("SENTIMENT_ANALYZER_HOSTPORT")
 SENTIMENT_ANALYZER_URL = (
-    f"https://{_sentiment_host}" if _sentiment_host
+    f"http://{_sentiment_hostport}" if _sentiment_hostport
     else os.environ.get("SENTIMENT_ANALYZER_URL", "http://localhost:5050")
 )
 

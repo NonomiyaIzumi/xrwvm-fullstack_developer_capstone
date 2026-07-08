@@ -36,16 +36,16 @@ services:
         value: admin@carsdealership.example
       - key: DJANGO_SUPERUSER_PASSWORD
         generateValue: true
-      - key: BACKEND_HOST
+      - key: BACKEND_HOSTPORT
         fromService:
           type: web
           name: dealership-database
-          property: host
-      - key: SENTIMENT_ANALYZER_HOST
+          property: hostport
+      - key: SENTIMENT_ANALYZER_HOSTPORT
         fromService:
           type: web
           name: dealership-sentiment-analyzer
-          property: host
+          property: hostport
       # Render assigns the final https://<name>-XXXX.onrender.com URL only
       # after first deploy. Set this manually in the Render dashboard once you
       # know it (Environment tab on the dealership-web service), then redeploy -

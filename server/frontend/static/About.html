@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Cars Dealership</title>
+  <link rel="stylesheet" href="/static/site.css" />
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="/">Cars Dealership</a>
+    <nav>
+      <a href="/">Home</a>
+      <a class="active" href="/static/About.html">About Us</a>
+      <a href="/static/Contact.html">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h1>About Us</h1>
+    <p>
+      Cars Dealership is a national car retailer with dealer branches across the United States.
+      This site was built as the Full Stack Application Development Capstone project: a Django
+      backend embedding a React single-page app, a Node.js/MongoDB microservice for dealers and
+      reviews, and a Flask microservice for review sentiment analysis.
+    </p>
+
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="/static/images/team-anh.png" alt="Bui Duy Anh" />
+        <h3>Bui Duy Anh</h3>
+        <p class="role">Full Stack Developer</p>
+        <p>Designed and built the Django + React application, the review microservices, and the CI/CD pipeline for this capstone project.</p>
+        <p class="email">buiduyanhdp@gmail.com</p>
+      </div>
+      <div class="team-card">
+        <img src="/static/images/team-linh.png" alt="Tran Thuy Linh" />
+        <h3>Tran Thuy Linh</h3>
+        <p class="role">UI/UX Designer</p>
+        <p>Owns the look and feel of the dealership storefront, from the dealer listing pages to the review forms.</p>
+        <p class="email">linh.tran@carsdealership.example</p>
+      </div>
+      <div class="team-card">
+        <img src="/static/images/team-minh.png" alt="Quoc Minh" />
+        <h3>Quoc Minh</h3>
+        <p class="role">QA Engineer</p>
+        <p>Keeps the login, review, and dealer-search flows regression free across every release.</p>
+        <p class="email">minh.nguyen@carsdealership.example</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2026 Cars Dealership &mdash; Full Stack Application Development Capstone Project
+  </footer>
+</body>
+</html>

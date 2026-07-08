@@ -1,0 +1,27 @@
+$ curl -s http://localhost:8000/djangoapp/get_dealers/Kansas
+
+{
+    "status": 200,
+    "dealers": [
+        {
+            "_id": "6a4e6b555fa940869171a825",
+            "id": 1,
+            "full_name": "Best Toyota Dealer",
+            "city": "Wichita",
+            "address": "500 Prairie Ave",
+            "zip": "67202",
+            "state": "Kansas",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a82c",
+            "id": 8,
+            "full_name": "Heartland Chevrolet",
+            "city": "Topeka",
+            "address": "310 Kansas Ave",
+            "zip": "66603",
+            "state": "Kansas",
+            "__v": 0
+        }
+    ]
+}

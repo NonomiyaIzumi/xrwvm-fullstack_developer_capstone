@@ -1,0 +1,87 @@
+$ curl -s http://localhost:8000/djangoapp/get_dealers
+
+{
+    "status": 200,
+    "dealers": [
+        {
+            "_id": "6a4e6b555fa940869171a825",
+            "id": 1,
+            "full_name": "Best Toyota Dealer",
+            "city": "Wichita",
+            "address": "500 Prairie Ave",
+            "zip": "67202",
+            "state": "Kansas",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a826",
+            "id": 2,
+            "full_name": "Sunny Motors",
+            "city": "Los Angeles",
+            "address": "42 Pacific Coast Hwy",
+            "zip": "90001",
+            "state": "California",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a827",
+            "id": 3,
+            "full_name": "Rocky Mountain Auto",
+            "city": "Denver",
+            "address": "180 Summit Rd",
+            "zip": "80202",
+            "state": "Colorado",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a828",
+            "id": 4,
+            "full_name": "Sunshine Cars",
+            "city": "Miami",
+            "address": "77 Ocean Drive",
+            "zip": "33139",
+            "state": "Florida",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a829",
+            "id": 5,
+            "full_name": "Lone Star Trucks",
+            "city": "Austin",
+            "address": "900 Congress Ave",
+            "zip": "78701",
+            "state": "Texas",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a82a",
+            "id": 6,
+            "full_name": "Empire Motors",
+            "city": "New York",
+            "address": "5 Broadway",
+            "zip": "10004",
+            "state": "New York",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a82b",
+            "id": 7,
+            "full_name": "Bavarian Motors",
+            "city": "Los Angeles",
+            "address": "1200 Sunset Blvd",
+            "zip": "90026",
+            "state": "California",
+            "__v": 0
+        },
+        {
+            "_id": "6a4e6b555fa940869171a82c",
+            "id": 8,
+            "full_name": "Heartland Chevrolet",
+            "city": "Topeka",
+            "address": "310 Kansas Ave",
+            "zip": "66603",
+            "state": "Kansas",
+            "__v": 0
+        }
+    ]
+}

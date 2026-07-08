@@ -1,0 +1,124 @@
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f2a44;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+}
+
+.navbar .brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar nav a,
+.navbar nav span {
+  color: #dbe2f2;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.navbar nav a.active,
+.navbar nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 60vh;
+}
+
+table.dealer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+table.dealer-table th,
+table.dealer-table td {
+  border: 1px solid #dde1e7;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+
+.state-filter {
+  margin-bottom: 1rem;
+}
+
+.review-card {
+  background: #fff;
+  border: 1px solid #dde1e7;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.sentiment-positive { color: #1a7f37; font-weight: 600; }
+.sentiment-neutral { color: #9a6700; font-weight: 600; }
+.sentiment-negative { color: #cf222e; font-weight: 600; }
+
+form.auth-form, form.review-form {
+  max-width: 420px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #dde1e7;
+}
+
+form.auth-form label, form.review-form label {
+  display: block;
+  margin-bottom: 0.85rem;
+  font-size: 0.9rem;
+}
+
+form.auth-form input,
+form.review-form input,
+form.review-form select,
+form.review-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #c7ccd6;
+  border-radius: 4px;
+}
+
+button.btn-primary {
+  background: #1f6feb;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1.2rem;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button.btn-primary:hover { background: #1858c7; }
+
+.error-text { color: #cf222e; margin-top: 0.5rem; }
+.success-text { color: #1a7f37; margin-top: 0.5rem; }
+
+footer.site-footer {
+  text-align: center;
+  padding: 1.25rem;
+  color: #6b7280;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyen Van A",
+    "dealership": 1,
+    "review": "Fantastic service, the whole team went above and beyond to help me find the right Camry.",
+    "purchase": true,
+    "purchase_date": "2026-02-14",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2022
+  },
+  {
+    "id": 2,
+    "name": "Tran Thi B",
+    "dealership": 1,
+    "review": "Average experience, the paperwork took much longer than expected.",
+    "purchase": true,
+    "purchase_date": "2026-03-02",
+    "car_make": "Toyota",
+    "car_model": "Corolla",
+    "car_year": 2023
+  },
+  {
+    "id": 3,
+    "name": "John Smith",
+    "dealership": 1,
+    "review": "Terrible experience, the sales rep was rude and the car had hidden damage.",
+    "purchase": false,
+    "purchase_date": "2026-01-20",
+    "car_make": "Toyota",
+    "car_model": "RAV4",
+    "car_year": 2023
+  },
+  {
+    "id": 4,
+    "name": "Maria Garcia",
+    "dealership": 2,
+    "review": "Great selection of cars and a very friendly staff. Highly recommend.",
+    "purchase": true,
+    "purchase_date": "2026-04-10",
+    "car_make": "Honda",
+    "car_model": "Civic",
+    "car_year": 2022
+  },
+  {
+    "id": 5,
+    "name": "Emily Davis",
+    "dealership": 8,
+    "review": "Fantastic services, quick and easy financing process.",
+    "purchase": true,
+    "purchase_date": "2026-05-05",
+    "car_make": "Chevrolet",
+    "car_model": "Malibu",
+    "car_year": 2022
+  }
+]

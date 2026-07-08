@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+server/db.sqlite3
+server/staticfiles/
+
+# Node
+node_modules/
+
+# Build artifacts already committed intentionally under server/frontend/static/
+# (the built React bundle is served directly by Django), so nothing extra
+# needs excluding there.
+
+# Editor/OS
+.DS_Store
+Thumbs.db

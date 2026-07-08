@@ -1,0 +1,22 @@
+[project]
+name = "cars-dealership-capstone"
+version = "0.1.0"
+description = "Django backend for the Full Stack Application Development Capstone (Cars Dealership) project"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "django>=5.2.15",
+    "requests>=2.32.0",
+    "whitenoise>=6.7.0",
+    "gunicorn>=23.0.0",
+    "flask>=3.0.0",
+    "flask-cors>=4.0.0",
+    "vadersentiment>=3.3.2",
+]
+
+[dependency-groups]
+dev = [
+    "fpdf2>=2.8.7",
+    "playwright>=1.61.0",
+    "pywin32>=306; sys_platform == 'win32'",
+]

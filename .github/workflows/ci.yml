@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  django:
+    name: Django backend (check + tests)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Sync Python dependencies
+        run: uv sync
+
+      - name: Django system check
+        run: uv run python manage.py check
+
+      - name: Run Django migrations
+        run: uv run python manage.py migrate
+
+      - name: Run Django test suite
+        run: uv run python manage.py test
+
+  frontend:
+    name: React frontend (build)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server/frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+  microservices:
+    name: Node + Flask microservices (syntax check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dealers/reviews service dependencies
+        working-directory: database
+        run: npm install
+
+      - name: Syntax-check dealers/reviews service
+        working-directory: database
+        run: |
+          node --check app.js
+          node --check models.js
+          node --check populate_mongodb.js
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Sync Python dependencies
+        working-directory: server
+        run: uv sync
+
+      - name: Syntax-check sentiment analyzer
+        working-directory: server
+        run: uv run python -m py_compile djangoapp/microservices/app.py

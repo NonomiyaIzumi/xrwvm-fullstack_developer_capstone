@@ -1,0 +1,90 @@
+$ curl -s http://localhost:8000/djangoapp/get_cars
+
+{
+    "CarModels": [
+        {
+            "CarMake": "Toyota",
+            "CarModel": "Camry",
+            "Type": "Sedan",
+            "Year": 2022,
+            "DealerId": 1
+        },
+        {
+            "CarMake": "Toyota",
+            "CarModel": "Corolla",
+            "Type": "Sedan",
+            "Year": 2023,
+            "DealerId": 2
+        },
+        {
+            "CarMake": "Toyota",
+            "CarModel": "RAV4",
+            "Type": "SUV",
+            "Year": 2023,
+            "DealerId": 3
+        },
+        {
+            "CarMake": "Honda",
+            "CarModel": "Civic",
+            "Type": "Sedan",
+            "Year": 2022,
+            "DealerId": 1
+        },
+        {
+            "CarMake": "Honda",
+            "CarModel": "CR-V",
+            "Type": "SUV",
+            "Year": 2023,
+            "DealerId": 4
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "F-150",
+            "Type": "Truck",
+            "Year": 2023,
+            "DealerId": 5
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "Mustang",
+            "Type": "Coupe",
+            "Year": 2022,
+            "DealerId": 2
+        },
+        {
+            "CarMake": "Ford",
+            "CarModel": "Explorer",
+            "Type": "SUV",
+            "Year": 2023,
+            "DealerId": 6
+        },
+        {
+            "CarMake": "BMW",
+            "CarModel": "3 Series",
+            "Type": "Sedan",
+            "Year": 2023,
+            "DealerId": 7
+        },
+        {
+            "CarMake": "BMW",
+            "CarModel": "X5",
+            "Type": "SUV",
+            "Year": 2022,
+            "DealerId": 3
+        },
+        {
+            "CarMake": "Chevrolet",
+            "CarModel": "Malibu",
+            "Type": "Sedan",
+            "Year": 2022,
+            "DealerId": 8
+        },
+        {
+            "CarMake": "Chevrolet",
+            "CarModel": "Silverado",
+            "Type": "Truck",
+            "Year": 2023,
+            "DealerId": 5
+        }
+    ]
+}

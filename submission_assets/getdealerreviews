@@ -1,0 +1,62 @@
+$ curl -s http://localhost:8000/djangoapp/reviews/dealer/1
+
+{
+    "status": 200,
+    "reviews": [
+        {
+            "_id": "6a4e6b555fa940869171a82e",
+            "id": 1,
+            "name": "Nguyen Van A",
+            "dealership": 1,
+            "review": "Fantastic service, the whole team went above and beyond to help me find the right Camry.",
+            "purchase": true,
+            "purchase_date": "2026-02-14",
+            "car_make": "Toyota",
+            "car_model": "Camry",
+            "car_year": 2022,
+            "__v": 0,
+            "sentiment": "positive"
+        },
+        {
+            "_id": "6a4e6b555fa940869171a82f",
+            "id": 2,
+            "name": "Tran Thi B",
+            "dealership": 1,
+            "review": "Average experience, the paperwork took much longer than expected.",
+            "purchase": true,
+            "purchase_date": "2026-03-02",
+            "car_make": "Toyota",
+            "car_model": "Corolla",
+            "car_year": 2023,
+            "__v": 0,
+            "sentiment": "neutral"
+        },
+        {
+            "_id": "6a4e6b555fa940869171a830",
+            "id": 3,
+            "name": "John Smith",
+            "dealership": 1,
+            "review": "Terrible experience, the sales rep was rude and the car had hidden damage.",
+            "purchase": false,
+            "purchase_date": "2026-01-20",
+            "car_make": "Toyota",
+            "car_model": "RAV4",
+            "car_year": 2023,
+            "__v": 0,
+            "sentiment": "negative"
+        },
+        {
+            "_id": "6a4e6b6a0cd9c3e0e1fee9c8",
+            "id": 6,
+            "name": "Jane Doe",
+            "dealership": 1,
+            "review": "The sales team was fast, friendly, and very transparent about pricing.",
+            "purchase": false,
+            "car_make": "Toyota",
+            "car_model": "Camry",
+            "car_year": 2022,
+            "__v": 0,
+            "sentiment": "positive"
+        }
+    ]
+}

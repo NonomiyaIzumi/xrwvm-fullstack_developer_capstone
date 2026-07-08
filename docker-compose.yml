@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  database:
+    build: ./database
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: mongodb://mongo:27017/dealershipsDB
+      PORT: 3030
+    ports:
+      - "3030:3030"
+
+  sentiment-analyzer:
+    build: ./server/djangoapp/microservices
+    environment:
+      PORT: 5050
+    ports:
+      - "5050:5050"
+
+  web:
+    build: ./server
+    depends_on:
+      - database
+      - sentiment-analyzer
+    environment:
+      BACKEND_URL: http://database:3030
+      SENTIMENT_ANALYZER_URL: http://sentiment-analyzer:5050
+      DJANGO_DEBUG: "False"
+    ports:
+      - "8000:8000"
+
+volumes:
+  mongo-data:

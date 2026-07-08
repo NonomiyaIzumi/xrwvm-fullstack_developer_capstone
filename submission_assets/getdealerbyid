@@ -1,0 +1,15 @@
+$ curl -s http://localhost:8000/djangoapp/dealer/1
+
+{
+    "status": 200,
+    "dealer": {
+        "_id": "6a4e6b555fa940869171a825",
+        "id": 1,
+        "full_name": "Best Toyota Dealer",
+        "city": "Wichita",
+        "address": "500 Prairie Ave",
+        "zip": "67202",
+        "state": "Kansas",
+        "__v": 0
+    }
+}

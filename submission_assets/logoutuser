@@ -1,0 +1,5 @@
+$ curl -s -b cookies.txt http://localhost:8000/djangoapp/logout
+
+{
+    "userName": ""
+}

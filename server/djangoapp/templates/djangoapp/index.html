@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cars Dealership</title>
+  <link rel="stylesheet" href="{% static 'static/css/main.css' %}" />
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    window.__DEALERSHIP_USER__ = {
+      isAuthenticated: {{ request.user.is_authenticated|yesno:"true,false" }},
+      username: "{{ request.user.username|default_if_none:'' }}"
+    };
+  </script>
+  <script src="{% static 'static/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+$ gh run view 28954998773 -R NonomiyaIzumi/fullstack-dealership-capstone
+
+
+✓ master CI · 28954998773
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ Node + Flask microservices (syntax check) in 17s (ID 85911486713)
+✓ Django backend (check + tests) in 12s (ID 85911486719)
+✓ React frontend (build) in 13s (ID 85911486729)
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, astral-sh/setup-uv@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Node + Flask microservices (syntax check): .github#2
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, astral-sh/setup-uv@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Django backend (check + tests): .github#2
+
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+React frontend (build): .github#2
+
+
+For more information about a job, try: gh run view --job=<job-id>
+View this run on GitHub: https://github.com/NonomiyaIzumi/fullstack-dealership-capstone/actions/runs/28954998773
+
+================================================================
+ Steps executed per job
+================================================================
+
+$ gh run view --job=85911486719 -R NonomiyaIzumi/fullstack-dealership-capstone   # Django backend
+
+✓ master CI · 28954998773
+Triggered via push about 3 minutes ago
+
+✓ Django backend (check + tests) in 12s (ID 85911486719)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Install uv
+  ✓ Sync Python dependencies
+  ✓ Django system check
+  ✓ Run Django migrations
+  ✓ Run Django test suite
+  ✓ Post Install uv
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, astral-sh/setup-uv@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Django backend (check + tests): .github#2
+
+
+To see the full job log, try: gh run view --log --job=85911486719
+View this run on GitHub: https://github.com/NonomiyaIzumi/fullstack-dealership-capstone/actions/runs/28954998773
+
+$ gh run view --job=85911486729 -R NonomiyaIzumi/fullstack-dealership-capstone   # React frontend
+
+✓ master CI · 28954998773
+Triggered via push about 3 minutes ago
+
+✓ React frontend (build) in 13s (ID 85911486729)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Set up Node
+  ✓ Install dependencies
+  ✓ Build React app
+  ✓ Post Set up Node
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+React frontend (build): .github#2
+
+
+To see the full job log, try: gh run view --log --job=85911486729
+View this run on GitHub: https://github.com/NonomiyaIzumi/fullstack-dealership-capstone/actions/runs/28954998773
+
+$ gh run view --job=85911486713 -R NonomiyaIzumi/fullstack-dealership-capstone   # Node + Flask microservices
+
+✓ master CI · 28954998773
+Triggered via push about 3 minutes ago
+
+✓ Node + Flask microservices (syntax check) in 17s (ID 85911486713)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Set up Node
+  ✓ Install dealers/reviews service dependencies
+  ✓ Syntax-check dealers/reviews service
+  ✓ Install uv
+  ✓ Sync Python dependencies
+  ✓ Syntax-check sentiment analyzer
+  ✓ Post Install uv
+  ✓ Post Set up Node
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, astral-sh/setup-uv@v3. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Node + Flask microservices (syntax check): .github#2
+
+
+To see the full job log, try: gh run view --log --job=85911486713
+View this run on GitHub: https://github.com/NonomiyaIzumi/fullstack-dealership-capstone/actions/runs/28954998773
+
+================================================================
+ Key step output (extracted from the full run log)
+================================================================
+
+--- [Django backend] Django system check ---
+##[group]Run uv run python manage.py check
+uv run python manage.py check
+shell: /usr/bin/bash -e {0}
+env:
+  UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+##[endgroup]
+System check identified no issues (0 silenced).
+
+--- [Django backend] Run Django migrations ---
+##[group]Run uv run python manage.py migrate
+uv run python manage.py migrate
+shell: /usr/bin/bash -e {0}
+env:
+  UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+##[endgroup]
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, djangoapp, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying djangoapp.0001_initial... OK
+  Applying sessions.0001_initial... OK
+
+--- [Django backend] Run Django test suite ---
+##[group]Run uv run python manage.py test
+uv run python manage.py test
+shell: /usr/bin/bash -e {0}
+env:
+  UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+##[endgroup]
+Creating test database for alias 'default'...
+/home/runner/work/fullstack-dealership-capstone/fullstack-dealership-capstone/server/.venv/lib/python3.12/site-packages/django/core/handlers/base.py:62: UserWarning: No directory at: /home/runner/work/fullstack-dealership-capstone/fullstack-dealership-capstone/server/staticfiles/
+  mw_instance = middleware(adapted_handler)
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.721s
+
+OK
+Destroying test database for alias 'default'...
+Found 2 test(s).
+System check identified no issues (0 silenced).
+
+--- [React frontend] Build React app ---
+##[group]Run npm run build
+npm run build
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+
+> dealership-frontend@0.1.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 41 modules transformed.
+rendering chunks...
+computing gzip size...
+static/static/css/main.css    1.80 kB │ gzip:  0.73 kB
+static/static/js/main.js    171.10 kB │ gzip: 55.42 kB
+✓ built in 964ms
+
+--- [Node + Flask microservices] Syntax-check dealers/reviews service ---
+##[group]Run node --check app.js
+node --check app.js
+node --check models.js
+node --check populate_mongodb.js
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+
+--- [Node + Flask microservices] Syntax-check sentiment analyzer ---
+##[group]Run uv run python -m py_compile djangoapp/microservices/app.py
+uv run python -m py_compile djangoapp/microservices/app.py
+shell: /usr/bin/bash -e {0}
+env:
+  UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+##[endgroup]

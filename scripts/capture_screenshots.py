@@ -85,14 +85,14 @@ def main():
         print("Captured dealersbystate.png")
 
         # --- 4. Dealer detail + reviews --------------------------------------------------
-        page.goto(f"{BASE_URL}/dealer/1")
+        page.goto(f"{BASE_URL}/dealer/17")
         page.wait_for_selector("text=Reviews")
         page.wait_for_selector("text=Loading reviews", state="detached", timeout=15000)
         save_with_address_bar(page, OUT_DIR / "dealer_id_reviews.png", full_page=True)
         print("Captured dealer_id_reviews.png")
 
         # --- 5. Post review form (before submit) -----------------------------------------
-        page.goto(f"{BASE_URL}/postreview/1")
+        page.goto(f"{BASE_URL}/postreview/17")
         page.wait_for_selector("form.review-form")
         page.fill("input[name=name]", "Jane Doe")
         page.fill("textarea[name=review]", "The sales team was fast, friendly, and very transparent about pricing.")
@@ -105,7 +105,7 @@ def main():
         page.wait_for_timeout(1600)
 
         # --- 6. Added review visible on the dealer page -----------------------------------
-        page.goto(f"{BASE_URL}/dealer/1")
+        page.goto(f"{BASE_URL}/dealer/17")
         page.wait_for_selector("text=Jane Doe")
         page.wait_for_timeout(300)
         save_with_address_bar(page, OUT_DIR / "added_review.png", full_page=True)

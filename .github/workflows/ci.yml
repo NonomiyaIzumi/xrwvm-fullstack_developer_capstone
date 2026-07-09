@@ -83,3 +83,40 @@ jobs:
       - name: Syntax-check sentiment analyzer
         working-directory: server
         run: uv run python -m py_compile djangoapp/microservices/app.py
+
+  lint-python:
+    name: Lint Python Files
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Sync Python dependencies
+        run: uv sync
+
+      - name: Run ruff
+        run: uv run ruff check --exit-zero .
+
+  lint-javascript:
+    name: Lint JavaScript Files
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install ESLint
+        working-directory: server/frontend
+        run: npm install --no-save eslint@8
+
+      - name: Run ESLint
+        working-directory: server/frontend
+        run: npx eslint src --ext .js,.jsx || true

@@ -3,10 +3,14 @@ const mongoose = require("mongoose");
 const dealerSchema = new mongoose.Schema({
   id: { type: Number, required: true, unique: true },
   full_name: { type: String, required: true },
+  short_name: String,
   city: String,
   address: String,
   zip: String,
   state: String,
+  st: String,
+  lat: Number,
+  long: Number,
 });
 
 const reviewSchema = new mongoose.Schema({

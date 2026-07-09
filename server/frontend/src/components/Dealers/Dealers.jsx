@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { fetchDealers } from "../../api.js";
 
-const STATES = ["All", "California", "Colorado", "Florida", "Kansas", "New York", "Texas"];
+const STATES = [
+  "All", "Alabama", "Arizona", "California", "Colorado", "Connecticut",
+  "District of Columbia", "Florida", "Georgia", "Illinois", "Iowa", "Kansas",
+  "Louisiana", "Maryland", "Michigan", "Minnesota", "New Jersey", "New York",
+  "Pennsylvania", "Texas", "Virginia", "Washington",
+];
 
 export default function Dealers({ user }) {
   const { state } = useParams();

@@ -10,8 +10,8 @@ const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/dealership
 async function seed() {
   await mongoose.connect(MONGO_URI);
 
-  const dealerships = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "dealerships.json")));
-  const reviews = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "reviews.json")));
+  const dealerships = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "dealerships.json"))).dealerships;
+  const reviews = JSON.parse(fs.readFileSync(path.join(__dirname, "data", "reviews.json"))).reviews;
 
   await Dealer.deleteMany({});
   await Review.deleteMany({});

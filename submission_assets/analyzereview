@@ -1,11 +1,5 @@
 $ curl -s "http://localhost:5050/analyze/Fantastic%20services"
 
 {
-    "scores": {
-        "compound": 0.5574,
-        "neg": 0.0,
-        "neu": 0.217,
-        "pos": 0.783
-    },
     "sentiment": "positive"
 }

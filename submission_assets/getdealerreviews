@@ -1,62 +1,56 @@
-$ curl -s http://localhost:8000/djangoapp/reviews/dealer/1
+$ curl -s http://localhost:3030/fetchReviews/dealer/17
 
-{
-    "status": 200,
-    "reviews": [
-        {
-            "_id": "6a4e6b555fa940869171a82e",
-            "id": 1,
-            "name": "Nguyen Van A",
-            "dealership": 1,
-            "review": "Fantastic service, the whole team went above and beyond to help me find the right Camry.",
-            "purchase": true,
-            "purchase_date": "2026-02-14",
-            "car_make": "Toyota",
-            "car_model": "Camry",
-            "car_year": 2022,
-            "__v": 0,
-            "sentiment": "positive"
-        },
-        {
-            "_id": "6a4e6b555fa940869171a82f",
-            "id": 2,
-            "name": "Tran Thi B",
-            "dealership": 1,
-            "review": "Average experience, the paperwork took much longer than expected.",
-            "purchase": true,
-            "purchase_date": "2026-03-02",
-            "car_make": "Toyota",
-            "car_model": "Corolla",
-            "car_year": 2023,
-            "__v": 0,
-            "sentiment": "neutral"
-        },
-        {
-            "_id": "6a4e6b555fa940869171a830",
-            "id": 3,
-            "name": "John Smith",
-            "dealership": 1,
-            "review": "Terrible experience, the sales rep was rude and the car had hidden damage.",
-            "purchase": false,
-            "purchase_date": "2026-01-20",
-            "car_make": "Toyota",
-            "car_model": "RAV4",
-            "car_year": 2023,
-            "__v": 0,
-            "sentiment": "negative"
-        },
-        {
-            "_id": "6a4e6b6a0cd9c3e0e1fee9c8",
-            "id": 6,
-            "name": "Jane Doe",
-            "dealership": 1,
-            "review": "The sales team was fast, friendly, and very transparent about pricing.",
-            "purchase": false,
-            "car_make": "Toyota",
-            "car_model": "Camry",
-            "car_year": 2022,
-            "__v": 0,
-            "sentiment": "positive"
-        }
-    ]
-}
+[
+    {
+        "_id": "6a4f87e2aafc811752f50ee2",
+        "id": 8,
+        "name": "Marmaduke Ashbe",
+        "dealership": 17,
+        "review": "Polarised asynchronous Graphical User Interface",
+        "purchase": true,
+        "purchase_date": "05/06/2020",
+        "car_make": "BMW",
+        "car_model": "530",
+        "car_year": 2006,
+        "__v": 0
+    },
+    {
+        "_id": "6a4f87e2aafc811752f50efb",
+        "id": 33,
+        "name": "Rey Bannell",
+        "dealership": 17,
+        "review": "Up-sized mission-critical initiative",
+        "purchase": true,
+        "purchase_date": "10/31/2020",
+        "car_make": "Pontiac",
+        "car_model": "GTO",
+        "car_year": 2004,
+        "__v": 0
+    },
+    {
+        "_id": "6a4f87e2aafc811752f50f01",
+        "id": 39,
+        "name": "Donn Wick",
+        "dealership": 17,
+        "review": "Cross-group multimedia firmware",
+        "purchase": false,
+        "purchase_date": "04/29/2020",
+        "car_make": "Buick",
+        "car_model": "Terraza",
+        "car_year": 2006,
+        "__v": 0
+    },
+    {
+        "_id": "6a4f87e2aafc811752f50f05",
+        "id": 43,
+        "name": "Glennis Hackett",
+        "dealership": 17,
+        "review": "Triple-buffered upward-trending conglomeration",
+        "purchase": false,
+        "purchase_date": "08/20/2020",
+        "car_make": "Nissan",
+        "car_model": "Altima",
+        "car_year": 2008,
+        "__v": 0
+    }
+]

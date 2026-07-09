@@ -18,14 +18,15 @@ analyzer = SentimentIntensityAnalyzer()
 
 def classify(text):
     scores = analyzer.polarity_scores(text)
-    compound = scores["compound"]
-    if compound >= 0.05:
-        label = "positive"
-    elif compound <= -0.05:
+    pos = float(scores["pos"])
+    neg = float(scores["neg"])
+    neu = float(scores["neu"])
+    label = "positive"
+    if neg > pos and neg > neu:
         label = "negative"
-    else:
+    elif neu > neg and neu > pos:
         label = "neutral"
-    return label, scores
+    return label
 
 
 @app.route("/", methods=["GET"])
@@ -35,8 +36,8 @@ def health():
 
 @app.route("/analyze/<path:text>", methods=["GET"])
 def analyze(text):
-    label, scores = classify(text)
-    return jsonify({"sentiment": label, "scores": scores})
+    label = classify(text)
+    return jsonify({"sentiment": label})
 
 
 if __name__ == "__main__":

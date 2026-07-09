@@ -34,23 +34,23 @@ export default function Register({ setUser }) {
       <form className="auth-form" onSubmit={handleSubmit}>
         <label>
           Username
-          <input name="userName" value={form.userName} onChange={handleChange} required />
+          <input name="userName" placeholder="Username" value={form.userName} onChange={handleChange} required />
         </label>
         <label>
           First Name
-          <input name="firstName" value={form.firstName} onChange={handleChange} required />
+          <input name="firstName" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
         </label>
         <label>
           Last Name
-          <input name="lastName" value={form.lastName} onChange={handleChange} required />
+          <input name="lastName" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
         </label>
         <label>
           Email
-          <input type="email" name="email" value={form.email} onChange={handleChange} required />
+          <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
         </label>
         <label>
           Password
-          <input type="password" name="password" value={form.password} onChange={handleChange} required />
+          <input type="password" name="password" placeholder="Password" value={form.password} onChange={handleChange} required />
         </label>
         <button type="submit" className="btn-primary">Register</button>
         {error && <p className="error-text">{error}</p>}

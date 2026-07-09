@@ -7,7 +7,7 @@ from fpdf import FPDF
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "submission_assets"
 
-REPO_URL = "https://github.com/NonomiyaIzumi/fullstack-dealership-capstone"
+REPO_URL = "https://github.com/NonomiyaIzumi/xrwvm-fullstack_developer_capstone"
 BLOB = f"{REPO_URL}/blob/master"
 
 ASCII_REPLACEMENTS = {

@@ -18,7 +18,7 @@ three `Dockerfile`s in `server/`, `database/`, and
 1. Go to <https://dashboard.render.com/blueprints> and sign in (GitHub OAuth is
    the fastest option).
 2. Click **New Blueprint Instance**, pick the
-   `NonomiyaIzumi/fullstack-dealership-capstone` repo, and confirm — Render
+   `NonomiyaIzumi/xrwvm-fullstack_developer_capstone` repo, and confirm — Render
    reads `render.yaml` and proposes all three services
    (`dealership-web`, `dealership-database`, `dealership-sentiment-analyzer`)
    on the Free plan.

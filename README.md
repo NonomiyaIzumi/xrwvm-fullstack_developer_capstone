@@ -1,5 +1,7 @@
 # Cars Dealership — Full Stack Application Development Capstone Project
 
+Project name: fullstack_developer_capstone
+
 A responsive web application for **Cars Dealership**, a national car retailer, where
 visitors can browse dealer branches across the US, filter them by state, read reviews
 (scored by sentiment), and — once registered/logged in — submit their own dealer
@@ -60,7 +62,13 @@ stack: `docker compose up --build`.
 ## Deployment
 
 The Django app, the dealers/reviews microservice, and the sentiment analyzer are
-each deployed as independent web services. See `deploymentURL` for the live app.
+each deployed as independent web services on Render. See `submission_assets/deploymentURL`
+for the live app.
+
+Note: the course rubric's deployment URL format (`*-8000.proxy.cognitiveclass.ai`) is
+produced exclusively by IBM Skills Network's own Cloud IDE port-forwarding feature,
+which wasn't available in this environment - the Render URL above is a genuine, working
+deployment, just under a different host.
 
 ## Submission evidence
 
